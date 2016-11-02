@@ -85,6 +85,10 @@
                                 <!-- Package format version - do not change -->
                                 <Vaadin-Package-Version>1</Vaadin-Package-Version>
                                 <Vaadin-License-Title>MIT</Vaadin-License-Title>
+                                <Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
+                                <Implementation-Vendor>${project.organization}</Implementation-Vendor>
+                                <Implementation-Title>${project.name}</Implementation-Title>
+                                <Implementation-Version>${project.version}</Implementation-Version>
                             </manifestEntries>
                         </archive>
                     </configuration>
