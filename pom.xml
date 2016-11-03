@@ -21,6 +21,18 @@
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     </properties>
 
+    <scm>
+        <url>git://github.com/kents1/vaadin-toast-addon.git</url>
+        <connection>scm:git:git://github.com/kents1/vaadin-toast-addon.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/kents1/vaadin-toast-addon.git</developerConnection>
+        <tag>vaadin-toastr-addon</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/kents1/vaadin-toast-addon/issues</url>
+    </issueManagement>
+
     <modules>
         <module>vaadin-toastr</module>
         <module>vaadin-toastr-demo</module>
