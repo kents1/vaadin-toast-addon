@@ -18,12 +18,13 @@
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     </properties>
 
     <scm>
         <url>git://github.com/kents1/vaadin-toast-addon.git</url>
         <connection>scm:git:git://github.com/kents1/vaadin-toast-addon.git</connection>
-        <developerConnection>scm:git:ssh://kents1@github.com:/kents1/vaadin-toast-addon.git</developerConnection>
+        <developerConnection>scm:git:https://github.com:/kents1/vaadin-toast-addon.git</developerConnection>
         <tag>vaadin-toastr-addon-1.0.0</tag>
     </scm>
 
@@ -97,7 +98,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>${maven-release-plugin.version}</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
             </plugin>
         </plugins>
     </build>
