@@ -25,7 +25,7 @@
     <scm>
         <url>git://github.com/kents1/vaadin-toast-addon.git</url>
         <connection>scm:git:git://github.com/kents1/vaadin-toast-addon.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:/kents1/vaadin-toast-addon.git</developerConnection>
+        <developerConnection>scm:git:ssh://kents1@github.com:/kents1/vaadin-toast-addon.git</developerConnection>
         <tag>vaadin-toastr-addon</tag>
     </scm>
 
