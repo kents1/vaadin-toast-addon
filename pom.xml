@@ -7,7 +7,8 @@
     <groupId>org.vaadin.addons</groupId>
     <artifactId>vaadin-toastr-addon</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Vaadin Toastr Addon</name>
 
     <properties>
         <!-- Library versions -->
