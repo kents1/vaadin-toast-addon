@@ -26,3 +26,10 @@ Go to http://localhost:8080/ to view the demo.
 
 ## Credits
 All of the hard work has been performed here https://github.com/CodeSeven/toastr
+
+## Notes
+
+Perform a release
+
+mvn release:prepare
+mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
