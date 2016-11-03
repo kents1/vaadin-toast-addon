@@ -8,7 +8,16 @@ JQuery: 2.1.4
 
 ## Install
 
+- Install from Vaadin Directory ( https://vaadin.com/directory#!addon/ )
+
 ## Running the demo
+
+- Clone this repository ( https://github.com/kents1/vaadin-toast-addon.git )
+- mvn clean install
+- cd vaadin-toastr-demo
+- mvn spring-boot:run
+
+Go to http://localhost:8080/ to view the demo.
 
 ## Authors
 **Simon Kent**
