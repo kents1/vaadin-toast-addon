@@ -8,7 +8,7 @@ JQuery: 2.1.4
 
 ## Install
 
-- Install from Vaadin Directory ( https://vaadin.com/directory#!addon/ )
+- Install from Vaadin Directory ( https://vaadin.com/directory#!addon/toastr-vaadin )
 
 ## Running the demo
 
