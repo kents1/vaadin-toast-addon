@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: Toastr Vaadin
+Implementation-Version: ${project.version}
+Vaadin-Addon: ${project.artifactId}-${project.version}.jar
+Vaadin-Package-Version: 1
+

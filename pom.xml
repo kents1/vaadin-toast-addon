@@ -19,6 +19,7 @@
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-assembly-plugin.version>3.0.0</maven-assembly-plugin.version>
     </properties>
 
     <scm>
@@ -36,6 +37,7 @@
     <modules>
         <module>vaadin-toastr</module>
         <module>vaadin-toastr-demo</module>
+        <module>vaadin-toastr-distribution</module>
     </modules>
 
     <dependencyManagement>
@@ -91,6 +93,16 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven-source-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven-assembly-plugin.version}</version>
+                    <configuration>
+                        <descriptors>
+                            <descriptor>src/assembly/bin.xml</descriptor>
+                        </descriptors>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
