@@ -6,7 +6,7 @@
     <groupId>org.vaadin.addons</groupId>
     <artifactId>vaadin-toastr</artifactId>
     <name>Toastr Vaadin</name>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.7-SNAPSHOT</version>
 
     <licenses>
         <license>
@@ -42,11 +42,13 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-server</artifactId>
             <version>${vaadin.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-client</artifactId>
             <version>${vaadin.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Utils -->
@@ -61,6 +63,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
