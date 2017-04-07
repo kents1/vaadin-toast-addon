@@ -61,12 +61,12 @@ public class DemoView extends VerticalLayout implements View, ToastrListener {
 
         final TextField titleField = new TextField("Title");
         titleField.setStyleName(ValoTheme.TEXTFIELD_SMALL);
-        titleField.setInputPrompt("Enter a title...");
+        titleField.setPlaceholder("Enter a title...");
         columnOneLayout.addComponent(titleField);
 
         final TextArea messageField = new TextArea("Message");
         messageField.setStyleName(ValoTheme.TEXTAREA_SMALL);
-        messageField.setInputPrompt("Enter a message...");
+        messageField.setPlaceholder("Enter a message...");
         messageField.setRows(3);
         columnOneLayout.addComponent(messageField);
 
@@ -103,17 +103,15 @@ public class DemoView extends VerticalLayout implements View, ToastrListener {
         columnTwoLayout.setHeightUndefined();
         columnTwoLayout.setSpacing(true);
 
-        final OptionGroup toastTypeGroup = new OptionGroup("Toast Type");
+        final RadioButtonGroup<String> toastTypeGroup = new RadioButtonGroup<>("Toast Type");
         toastTypeGroup.setStyleName(ValoTheme.BUTTON_SMALL);
-        toastTypeGroup.addItems("Success", "Info", "Warning", "Error");
-        toastTypeGroup.setNullSelectionAllowed(false);
+        toastTypeGroup.setItems("Success", "Info", "Warning", "Error");
         toastTypeGroup.setValue("Success");
         columnTwoLayout.addComponent(toastTypeGroup);
 
-        final OptionGroup positionGroup = new OptionGroup("Position");
+        final RadioButtonGroup<String> positionGroup = new RadioButtonGroup<>("Position");
         positionGroup.setStyleName(ValoTheme.BUTTON_SMALL);
-        positionGroup.addItems("Top Right", "Bottom Right", "Bottom Left", "Top Left", "Top Full Width", "Bottom Full Width", "Top Center", "Bottom Center");
-        positionGroup.setNullSelectionAllowed(false);
+        positionGroup.setItems("Top Right", "Bottom Right", "Bottom Left", "Top Left", "Top Full Width", "Bottom Full Width", "Top Center", "Bottom Center");
         positionGroup.setValue("Top Right");
         columnTwoLayout.addComponent(positionGroup);
 
@@ -169,7 +167,7 @@ public class DemoView extends VerticalLayout implements View, ToastrListener {
         showToastButton.setStyleName(ValoTheme.BUTTON_PRIMARY);
         showToastButton.addStyleName(ValoTheme.BUTTON_SMALL);
         showToastButton.addClickListener(event -> toastr.toast(
-                ToastBuilder.of(ToastType.valueOf(toastTypeGroup.getValue().toString()), messageField.getValue())
+                ToastBuilder.of(ToastType.valueOf(toastTypeGroup.getValue()), messageField.getValue())
                         .caption(titleField.getValue())
                         .options(having()
                                     .closeButton(closeButton.getValue())
@@ -178,7 +176,7 @@ public class DemoView extends VerticalLayout implements View, ToastrListener {
                                     .preventDuplicates(preventDuplicatesButton.getValue())
                                     .newestOnTop(newestOnTopButton.getValue())
                                     .tapToDismiss(!tapToDismissButton.getValue())
-                                    .position(getPosition(positionGroup.getValue().toString()))
+                                    .position(getPosition(positionGroup.getValue()))
                                     .rightToLeft(rtlButton.getValue())
                                     .showEasing(ToastEasing.find(showEasingField.getValue()).orElse(ToastEasing.Swing))
                                     .hideEasing(ToastEasing.find(hideEasingField.getValue()).orElse(ToastEasing.Linear))
