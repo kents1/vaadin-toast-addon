@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Toastr Vaadin
-Implementation-Version: ${project.version}
-Vaadin-Addon: vaadin-toastr-${project.version}.jar
-Vaadin-Package-Version: 1

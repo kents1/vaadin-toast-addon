@@ -13,7 +13,7 @@ JQuery: 2.1.4
 ## Running the demo
 
 - Clone this repository ( https://github.com/kents1/vaadin-toast-addon.git )
-- mvn clean install
+- mvn clean verify
 - cd vaadin-toastr-demo
 - mvn spring-boot:run
 

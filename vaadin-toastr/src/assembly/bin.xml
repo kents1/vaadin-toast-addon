@@ -3,27 +3,17 @@
           xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
     <id>bin</id>
     <formats>
-        <format>dir</format>
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
-    <moduleSets>
-        <moduleSet>
-            <!-- Enable access to all projects in the current multimodule build! -->
-            <useAllReactorProjects>true</useAllReactorProjects>
-
-            <!-- Now, select which projects to include in this module-set. -->
-            <includes>
-                <include>org.vaadin.addons:vaadin-toastr</include>
-                <include>org.vaadin.addons:vaadin-toastr-demo</include>
-            </includes>
-            <binaries>
-                <includeDependencies>false</includeDependencies>
-                <unpack>false</unpack>
-            </binaries>
-        </moduleSet>
-    </moduleSets>
     <fileSets>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>./</outputDirectory>
+            <includes>
+                <include>*-${project.version}.jar</include>
+            </includes>
+        </fileSet>
         <fileSet>
             <outputDirectory>/</outputDirectory>
             <filtered>true</filtered>
