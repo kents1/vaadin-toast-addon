@@ -29,6 +29,7 @@ import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.StyleSheet;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
+import org.vaadin.addons.builder.ToastBuilder;
 import org.vaadin.addons.client.ToastrComponentState;
 
 import java.util.ArrayList;
@@ -60,6 +61,38 @@ public class Toastr extends AbstractJavaScriptComponent {
         toastr(toast.getMessage(), toast.getCaption(), toast.getType(), toast.getOptions());
     }
 
+    public void success(final String message) {
+        success(null, message);
+    }
+
+    public void success(final String caption, final String message) {
+        toast(ToastBuilder.success(message).caption(caption).build());
+    }
+
+    public void info(final String message) {
+        info(null, message);
+    }
+
+    public void info(final String caption, final String message) {
+        toast(ToastBuilder.info(message).caption(caption).build());
+    }
+
+    public void warning(final String message) {
+        warning(null, message);
+    }
+
+    public void warning(final String caption, final String message) {
+        toast(ToastBuilder.warning(message).caption(caption).build());
+    }
+
+    public void error(final String message) {
+        error(null, message);
+    }
+
+    public void error(final String caption, final String message) {
+        toast(ToastBuilder.error(message).caption(caption).build());
+    }
+
     public void clear() {
         callFunction(FUNCTION_CLEAR);
     }
@@ -84,6 +117,9 @@ public class Toastr extends AbstractJavaScriptComponent {
     }
 
     static class ToastrJavaScriptFunctions {
+
+        private ToastrJavaScriptFunctions() {}
+
         static final String JS_METHOD_NAME = "vaadinToastr";
 
         static final String ACTION_SHOWN = "onShown";
@@ -94,4 +130,5 @@ public class Toastr extends AbstractJavaScriptComponent {
         static final String FUNCTION_CLEAR = "clear";
         static final String FUNCTION_REMOVE = "remove";
     }
+
 }
