@@ -30,6 +30,7 @@ import com.vaadin.annotations.StyleSheet;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
 import org.vaadin.addons.builder.ToastBuilder;
+import org.vaadin.addons.builder.ToastOptionsBuilder;
 import org.vaadin.addons.client.ToastrComponentState;
 
 import java.util.ArrayList;
@@ -66,7 +67,12 @@ public class Toastr extends AbstractJavaScriptComponent {
     }
 
     public void success(final String caption, final String message) {
-        toast(ToastBuilder.success(message).caption(caption).build());
+        success(caption, message, ToastPosition.Top_Left);
+    }
+
+    public void success(final String caption, final String message, final ToastPosition position) {
+        toast(ToastBuilder.success(message).caption(caption)
+                .options(ToastOptionsBuilder.having().position(position).build()).build());
     }
 
     public void info(final String message) {
@@ -74,7 +80,12 @@ public class Toastr extends AbstractJavaScriptComponent {
     }
 
     public void info(final String caption, final String message) {
-        toast(ToastBuilder.info(message).caption(caption).build());
+        info(caption, message, ToastPosition.Top_Left);
+    }
+
+    public void info(final String caption, final String message, final ToastPosition position) {
+        toast(ToastBuilder.info(message).caption(caption)
+                .options(ToastOptionsBuilder.having().position(position).build()).build());
     }
 
     public void warning(final String message) {
@@ -82,7 +93,12 @@ public class Toastr extends AbstractJavaScriptComponent {
     }
 
     public void warning(final String caption, final String message) {
-        toast(ToastBuilder.warning(message).caption(caption).build());
+        warning(caption, message, ToastPosition.Top_Left);
+    }
+
+    public void warning(final String caption, final String message, final ToastPosition position) {
+        toast(ToastBuilder.warning(message).caption(caption)
+                .options(ToastOptionsBuilder.having().position(position).build()).build());
     }
 
     public void error(final String message) {
@@ -90,7 +106,12 @@ public class Toastr extends AbstractJavaScriptComponent {
     }
 
     public void error(final String caption, final String message) {
-        toast(ToastBuilder.error(message).caption(caption).build());
+        error(caption, message, ToastPosition.Top_Left);
+    }
+
+    public void error(final String caption, final String message, final ToastPosition position) {
+        toast(ToastBuilder.error(message).caption(caption)
+                .options(ToastOptionsBuilder.having().position(position).build()).build());
     }
 
     public void clear() {
