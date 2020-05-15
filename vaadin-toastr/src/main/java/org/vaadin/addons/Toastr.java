@@ -38,7 +38,7 @@ import java.util.Collection;
 
 import static org.vaadin.addons.Toastr.ToastrJavaScriptFunctions.*;
 
-@JavaScript({ "jquery-2.1.4.min.js", "toastr/2_1_3/toastr.min.js", "toastr-connector.js" })
+@JavaScript({ "jquery-3.5.1.min.js", "toastr/2_1_3/toastr.min.js", "toastr-connector.js" })
 @StyleSheet({ "toastr/2_1_3/toastr.min.css" })
 public class Toastr extends AbstractJavaScriptComponent {
 
