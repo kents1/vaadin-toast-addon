@@ -2,7 +2,7 @@
 **Toastr Addon for Vaadin** is a Vaadin server side component for the toastr JavaScript library.
 
 ## Current Version
-Vaadin Toastr Addon: 1.0.10
+Vaadin Toastr Addon: 1.0.11
 Toastr: 2.1.3
 JQuery: 3.5.1
 
