@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addons</groupId>
     <artifactId>vaadin-toastr-addon</artifactId>
-    <version>1.0.9-SNAPSHOT</version>
+    <version>1.0.10-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Vaadin Toastr Addon</name>
 
@@ -12,7 +12,7 @@
         <url>git://github.com/kents1/vaadin-toast-addon.git</url>
         <connection>scm:git:git://github.com/kents1/vaadin-toast-addon.git</connection>
         <developerConnection>scm:git:https://github.com:/kents1/vaadin-toast-addon.git</developerConnection>
-        <tag>vaadin-toastr-addon-1.0.9</tag>
+        <tag>vaadin-toastr-addon-1.0.10</tag>
     </scm>
 
     <issueManagement>
