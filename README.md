@@ -24,6 +24,10 @@ Go to http://localhost:8080/ to view the demo.
 
 + [http://twitter.com/kents1](http://twitter.com/kents1)
 
+## Contributors
+
++ [Mika-Oksanen](https://github.com/Mika-Oksanen)
+
 ## Credits
 All of the hard work has been performed here https://github.com/CodeSeven/toastr
 
