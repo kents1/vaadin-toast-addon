@@ -26,7 +26,7 @@
         <!-- Library versions -->
         <vaadin.version>8.0.5</vaadin.version>
         <junit.version>4.12</junit.version>
-        <jackson.version>2.8.4</jackson.version>
+        <jackson.version>2.9.10.7</jackson.version>
 
         <!-- Plugin versions -->
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
