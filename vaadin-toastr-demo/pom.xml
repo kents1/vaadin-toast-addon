@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin-spring-boot-starter.version>1.0.2</vaadin-spring-boot-starter.version>
-        <vaadin.version>8.0.5</vaadin.version>
+        <vaadin.version>8.14.1</vaadin.version>
         <spring-boot.version>1.4.2</spring-boot.version>
         <spring-boot-maven-plugin.version>1.5.2.RELEASE</spring-boot-maven-plugin.version>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
